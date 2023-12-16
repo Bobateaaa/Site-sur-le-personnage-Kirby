@@ -1,0 +1,349 @@
+/*Ajuster les fond des texts*/
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+/*Intégration du smooth-scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/*Stylisation avec flexbox en rangée et flex-wrap*/
+header, #accueil, #conteneurArticle, #galerie div {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*Stylisation avec flexbox en colonne et flex-wrap*/
+#inscription, #tableau, #video, #galerie  {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+/*Stylisation qui permet d’ajuster la largeur des éléments en fonction de la taille du contenu */
+th p, td p, td img, form, fieldset, a, header div, h2, h3{
+    width: fit-content;
+}
+
+/*Stylisation aux sous-titres de la page et ajout d'une marge*/
+h2, h3{
+    font-family: Century Gothic, 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 20px auto;
+}
+
+/*Ajuster la taille de la police des sous-titres h2*/
+h2 {
+    font-size: 29px;
+}
+
+
+
+/*Ajuster les marges et la disposition de chaque sections*/
+#accueil, #inscription, #tableau, #article ,#video ,#galerie {
+    height: 100vh;
+    min-height: 100vh;
+    padding: 20px 20px 20px 20px;
+    height: fit-content;
+}
+
+
+
+
+/*Stylisation pour le header*/
+header {
+    z-index: 1;
+
+    width: 100vw;
+    padding: 10px 10px 10px 10px;
+
+    background-color: #fff;
+
+    position: fixed;
+
+    align-items: center;
+    justify-content: space-around;
+}
+header div {
+    display: flex;
+    flex-flow: nowrap row;
+
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 10px;
+}
+ion-icon {
+    margin-right: 5px;
+    font-size: 29px;
+    color: rgb(207, 130, 130);
+}
+a {
+    color: palevioletred;
+    margin: auto 2px;
+}
+header h1 {
+    margin: 3px auto;
+    font-size: 3vh;
+    color: palevioletred;
+}
+    
+
+    
+/*Stylisation pour la section accueil */
+#accueil {
+    background-color: rgb(231, 187, 195);
+    background-image: url("images/arrierePlan1.jpg");
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+#accueil img {
+    margin: 0px 0px 20px 0px;
+    width: 55vw;
+    
+    transition: transform 10s; 
+}
+#accueil img:hover {
+    transform: scale(1.1) rotate(10deg); 
+    -webkit-transform: scale(1.1) rotate(10deg) ;
+    -moz-transform: scale(1.1) rotate(10deg);
+    -ms-transform: scale(1.1) rotate(10deg);
+    -o-transform: scale(1.1) rotate(10deg);
+}
+#accueil p, h1 {
+    text-align: center;
+}
+#contText {
+    margin: 20px auto 40px auto;
+    padding: 20px 40px 40px 40px;
+
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px #d0e7ff;
+
+    background-color: #e8f3ffca;
+}
+#contText:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+
+
+
+/*Stylisation pour la section inscription */
+#inscription {
+    z-index: 1;
+
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+form {
+    margin: 20px auto;
+}
+fieldset{
+    margin-top: 30px;
+    margin: auto;
+
+    border-radius: 10px;
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgba(175, 226, 255, 0.7);
+    box-shadow: 10px 10px 1px #041b3d;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+input, label{
+    padding: 5px 20px 5px 20px;
+}
+.marginLabelInput { /*normalize.css force les marges a ce coller, alors il faut créer une classe pour pouvoir ajuster le marge correctement*/
+    margin: 20px 0px 20px 0px;
+}
+
+
+
+
+/*Stylisation pour la section inscription */
+#tableau {
+    background-image: url("images/backkirb2.jpg");
+
+    align-items: center;
+    justify-content: center;
+}
+table {
+    margin: 100px auto;
+    height: 75vh;
+    
+    box-shadow: 10px 10px 1px #ff8fb2;
+}
+table, th, td {
+    border: 3px solid black;
+    background-color: rgb(255, 199, 218);
+}
+th, td {
+    padding: 5px;
+}
+th p, td p, td img {
+    margin: 5px auto;
+}
+
+
+
+
+/*Stylisation pour la section article */
+#article {
+    background-color: rgb(255, 179, 228);
+}
+#article img {
+    margin: 10px auto 10px auto;
+    max-width: 300px;
+
+    border: 1px solid black;
+}
+#conteneurArticle {
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;  
+    
+    margin: 100px auto 100px auto;
+    
+    transition: background-color 2s
+}
+#conteneurArticle:hover{
+    transition: background-color 2s;
+    background-color: rgb(255, 218, 230);
+}
+article p{
+    margin: 10px auto 10px auto
+}
+article {
+    padding: 20px 20px 20px 20px;
+    margin: 50px auto;
+    width: 300px;
+
+    background-color: #ff8fb2;
+    box-shadow: 15px 15px 1px #fbdde6;
+    border: 1px solid black;
+}
+article:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+
+
+
+/*Stylisation pour la section video */
+#video {
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(232, 213, 105);
+}
+iframe {
+    height: 50vh;
+    width: 60vw;
+    margin: 20px auto;
+    box-shadow: 0px 0px 1000px #ffffdc;
+    box-shadow: 10px 10px 1px #3d3404;
+}
+#video p {
+    margin-top: 20px;
+    width: 60vw;
+}
+
+
+
+
+
+/*Stylisation pour la section galerie */
+#galerie {
+    background-color: pink;
+    align-content: center;
+}
+#galerie p{
+    text-align: center;
+
+}
+#galerie div {
+    align-items: center;
+    justify-content: center;
+    margin: auto 0 auto 0;
+    width: 80%;
+}
+#galerie img {
+    width: 100px;
+    margin: 20px 20px 20px 20px;
+
+    border: 5px solid rgb(38, 1, 32);
+    box-shadow: 10px 10px 1px #f47dff;
+    border-radius: 100px;
+
+    transition: 2s;
+}
+#galerie img:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);    
+}
+
+
+
+
+/*Stylisation pour le footer*/
+footer {
+    padding: 30px 0px 10px 0px;
+    background-color: palevioletred;
+    text-align: center;
+}
+footer a{
+    color: rgb(0, 0, 0);
+}
+footer ion-icon{
+    color: #fbdde6;
+    margin: 20px 10px 10px 10px;
+    font-size: 30px;   
+}
+
+
+
+
+/*Ajustement de la taille des images*/
+.footerPetitText{ 
+    margin: 20px 0px 0px 0px;
+    font-size: 12px;
+}
+.bigger {
+    font-size: 10vw;
+}
+.smaller {
+    width: 3vw;
+}
+.smallerheight {
+    width: 100px;
+}
+.width30vw {
+    width: 30vw;
+}
+.smallerimg {
+    width: 75px;
+}
+
+
+
+
